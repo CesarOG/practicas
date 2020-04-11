@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AppPrueba.MainPage"
+             Title="App para Trabajo">
+
+    <ContentPage.Resources>
+        <Color x:Key="primary">#0275d8</Color>
+        <Color x:Key="success">#5cb85c</Color>
+        <Color x:Key="info">#5bc0de</Color>
+        <Color x:Key="warning">#f0ad4e</Color>
+        <Color x:Key="danger">#d9534f</Color>
+        <Color x:Key="inverse">#292b2c</Color>
+        <Color x:Key="faded">#f7f7f7</Color>
+    </ContentPage.Resources>
+
+    <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand">
+        <StackLayout.Resources>
+            <ResourceDictionary>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <DataTrigger TargetType="Button" Binding="{Binding Text.Length, Source={x:Reference codigo}}" Value="0">
+                            <Setter Property="IsEnabled" Value="False"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ResourceDictionary>
+        </StackLayout.Resources>
+        <Label Text="Ingresa tu Codigo"/>
+        <Entry x:Name="codigo" Text=""/>
+        <Button Text="Enviar"/>
+    </StackLayout>
+
+    <!--<StackLayout>
+        <StackLayout.Resources>
+            <ResourceDictionary>
+                <Style x:Key="estiloEntry" TargetType="Entry">
+                    <Style.Triggers>
+                        <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                            <Setter Property="TextColor" Value="#0275d8"/>
+                            <Setter Property="FontSize" Value="20"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </ResourceDictionary>
+        </StackLayout.Resources>
+        <Entry Text="Hola" Style="{StaticResource estiloEntry}"/>
+        <Entry Text="Soy" Style="{StaticResource estiloEntry}"/>
+        <Entry Text="Un Trigger" Style="{StaticResource estiloEntry}"/>
+    </StackLayout>-->
+    
+    <!--<StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+        <StackLayout.Resources>
+            <ResourceDictionary>
+                <Style  TargetType="Button">
+                    <Setter Property="FontSize" Value="15"/>
+                    <Setter Property="Margin" Value="50"/>
+                    <Setter Property="BackgroundColor" Value="#5cb85c"/>
+                    <Setter Property="TextColor" Value="#f7f7f7"/>
+                    <Setter Property="CornerRadius" Value="7"/>
+                </Style>
+                <Style x:Key="btnPrimary" TargetType="Button">                   
+                    <Setter Property="BackgroundColor" Value="#0275d8"/>
+                    <Setter Property="TextColor" Value="#f7f7f7"/>
+                </Style>
+                <Style x:Key="btnSuccess" TargetType="Button">                   
+                    <Setter Property="BackgroundColor" Value="#5cb85c"/>
+                    <Setter Property="TextColor" Value="#f7f7f7"/>
+                </Style>
+                <Style x:Key="btnDanger" TargetType="Button">                   
+                    <Setter Property="BackgroundColor" Value="#d9534f"/>
+                    <Setter Property="TextColor" Value="#f7f7f7"/>
+                </Style>
+            </ResourceDictionary>
+        </StackLayout.Resources>
+        <Button Text="Boton uno"  Style="{DynamicResource btnPrimary}" />
+        <Button Text="Boton dos"  Style="{DynamicResource btnSuccess}" />
+        <Button Text="Boton tres" Style="{DynamicResource btnDanger}" />
+    </StackLayout>-->
+
+    <!--<StackLayout>
+        <StackLayout.Resources>
+            <ResourceDictionary>
+                <Style x:Key="estiloBtn" TargetType="Button">
+                    <Setter Property="WidthRequest" Value="120"/>
+                    <Setter Property="TextColor" Value="#f7f7f7"/>
+                    <Setter Property="BorderWidth" Value="5"/>
+                    <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                    <Setter Property="HorizontalOptions" Value="Center"/>
+                    <Setter Property="BackgroundColor" Value="#0275d8"/>
+                </Style>
+                <Style x:Key="estiloBase" BasedOn="{StaticResource estiloBtn}" TargetType="Button">
+                    <Setter Property="TextColor" Value="#292b2c"/>
+                    <Setter Property="FontSize" Value="20"/>
+                    <Setter Property="CornerRadius" Value="7"/>
+                </Style>
+            </ResourceDictionary>
+        </StackLayout.Resources>
+
+        <Button Style="{StaticResource estiloBtn}" Text="Iniciar sesión"/>
+        <Button Style="{StaticResource estiloBase}" Text="Recuperar contraseña"/>
+        <Frame OutlineColor="black" HasShadow="True">
+        <Button Style="{StaticResource estiloBtn}" Text="Registrate"/>
+        </Frame>
+    </StackLayout>-->
+    
+    <!--<StackLayout>
+        <Entry Placeholder="Nombre" PlaceholderColor="{StaticResource danger}"/>
+        <Entry Placeholder="Contraseña" IsPassword="True" PlaceholderColor="{StaticResource danger}"/>
+        <Editor Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry." />
+        <SearchBar Placeholder="Buscar contenido."/>
+        <Picker>
+            <Picker.Items>
+                <x:String>Té</x:String>
+                <x:String>Anis</x:String>
+                <x:String>Manzanilla</x:String>
+            </Picker.Items>
+        </Picker>
+    </StackLayout>-->
+
+    <!--<WebView Source="https://panel.cesarortegagodoy.com/Usuario"/>-->
+
+    <!--<Frame OutlineColor="{StaticResource info}" HasShadow="True">
+        <BoxView BackgroundColor="{StaticResource warning}" WidthRequest="200" HeightRequest="200"/>
+    </Frame>-->
+    
+    
+    <!--<StackLayout>
+        <Button Text="Iniciar Sesión" Clicked="Button_Clicked" BackgroundColor="{StaticResource success}"/>
+        <Stepper Minimum="0" Maximum="100" Increment="5"/>
+        <Switch IsToggled="True" OnColor="{StaticResource info}}"/>
+        <Slider Minimum="0" Maximum="100" BackgroundColor="{StaticResource primary}" ThumbColor="{StaticResource danger}"/>
+        <DatePicker />
+        <TimePicker />
+        <ProgressBar Progress="0.66" ProgressColor="{StaticResource danger}"/>
+        <BoxView Color="{StaticResource info}" HeightRequest="100" WidthRequest="100"/>
+        <Image Source="https://i.pinimg.com/originals/a1/a5/66/a1a566a02a94741015c089d18279b449.jpg"/>
+        
+    </StackLayout>-->
+
+
+    <!--<Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>--><!--Fijo--><!--
+            <ColumnDefinition Width="Auto"/>--><!--Automatico--><!--
+            <ColumnDefinition/>            --><!--Predetermina(1)--><!--
+            <ColumnDefinition Width="2*"/>--><!--Proporsional--><!--
+        </Grid.ColumnDefinitions>
+
+        <BoxView Color="{StaticResource danger}"/>
+        <BoxView Color="{StaticResource primary}" Grid.Column="1" WidthRequest="150"/>
+        <BoxView Color="{StaticResource success}" Grid.Column="2"/>
+        <BoxView Color="{StaticResource inverse}" Grid.Column="3"/>
+        
+    </Grid>-->
+    
+    <!--<Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <BoxView Color="{StaticResource primary}" />
+        <BoxView Color="{StaticResource success}" Grid.Column="1"/>
+        <BoxView Color="{StaticResource info}" Grid.Row="1"/>
+        <BoxView Color="{StaticResource warning}" Grid.Column="1" Grid.Row="1" />
+        
+    </Grid>-->    
+    
+    <!--<StackLayout Spacing="0">
+
+        <Entry Text="Curso de Xamarin Android y IOS"/>
+        <Button Text="Boton de inicio" VerticalOptions="Start" HorizontalOptions="FillAndExpand" BackgroundColor="LightGray"/>
+        <Label Text="Bienvenidos al curso de Xamarin!!°!" 
+               FontSize="16"
+               FontFamily="Lato"
+               TextColor="Black"
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+        <ProgressBar Progress="0.5" WidthRequest="50" HeightRequest="20" ProgressColor="{StaticResource success}"/>
+        <SearchBar Placeholder="Buscar contenido"/>
+        <BoxView Color="#0275d8" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+        <BoxView Color="#5cb85c" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+        <BoxView Color="#5bc0de" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+        <BoxView Color="#f0ad4e" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+        <BoxView Color="#d9534f" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+        <BoxView Color="#292b2c" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+        <BoxView Color="#f7f7f7" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+
+    </StackLayout>-->
+
+    <!--<StackLayout BackgroundColor="BlueViolet" Margin="0,20,0,0" >
+        
+        <Label Text="Start" BackgroundColor="Black" TextColor="White" HorizontalOptions="Start"/>
+        <Label Text="Center" BackgroundColor="Black" TextColor="White" HorizontalOptions="Center"/>
+        <Label Text="End" BackgroundColor="Black" TextColor="White" HorizontalOptions="End"/>
+        <Label Text="Fill" BackgroundColor="Black" TextColor="White" HorizontalOptions="Fill"/>
+        
+        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+
+        <BoxView BackgroundColor="AliceBlue" HeightRequest="1"/>
+        <Label Text="Start" BackgroundColor="Black" TextColor="White" VerticalOptions="StartAndExpand"/>
+        <BoxView BackgroundColor="AliceBlue" HeightRequest="1"/>
+        <Label Text="Center" BackgroundColor="Black" TextColor="White" VerticalOptions="CenterAndExpand"/>
+        <BoxView BackgroundColor="AliceBlue" HeightRequest="1"/>
+        <Label Text="End" BackgroundColor="Black" TextColor="White" VerticalOptions="EndAndExpand"/>
+        <BoxView BackgroundColor="AliceBlue" HeightRequest="1"/>
+        <Label Text="Fill" BackgroundColor="Black" TextColor="White" VerticalOptions="FillAndExpand"/>
+        <BoxView BackgroundColor="AliceBlue" HeightRequest="1"/>
+        
+
+    </StackLayout>-->
+
+    <!--<BoxView Color="{StaticResource miColor} "/>
+
+        <StackLayout>     
+            <Entry Text="Curso de Xamarin Android y IOS"/>
+            <Label Text="Bienvenidos al curso de Xamarin!!°!" 
+               FontSize="16"
+               FontFamily="Lato"
+               TextColor="White"
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+            <Button Text="INICIAR SESIÓN" TextColor="Red" BackgroundColor="LightGray" FontSize="22" />
+        </StackLayout>-->
+
+</ContentPage>

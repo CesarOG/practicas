@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="EjercicioDeDiseno.MainPage">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="0" Padding="0" BackgroundColor="Aqua">
+                <BoxView  HorizontalOptions="FillAndExpand" HeightRequest="100" VerticalOptions="Start" Color="#18c9b0"/>
+                <Button CornerRadius="20" HeightRequest="60" WidthRequest="60" Text="" BackgroundColor="#0e6655" HorizontalOptions="Center" VerticalOptions="Start"/>
+                <StackLayout HeightRequest="100" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="20" BackgroundColor="#28b463">
+                    <Label Text="Usuario" FontSize="15" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
+                    <Entry Placeholder="Ingrese su Usuario" TextColor="White" BackgroundColor="#2d8348" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

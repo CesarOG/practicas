@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SliderEjercicio.MainPage"
+             Title="Slider">
+
+    <StackLayout>
+        <Label x:Name="_rotacionLabel" Text="Rotar este Texto" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" FontSize="Large" TextColor="Blue"/>
+        <Slider Maximum="360" ValueChanged="Slider_ValueChanged" BackgroundColor="Green" />
+        <Label x:Name="_displayLabel" Text="Desliza para rotar" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" TextColor="Red"/>
+
+    </StackLayout>
+
+</ContentPage>
