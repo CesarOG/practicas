@@ -15,6 +15,30 @@
                     <Label Text="Usuario" FontSize="15" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
                     <Entry Placeholder="Ingrese su Usuario" TextColor="White" BackgroundColor="#2d8348" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
                 </StackLayout>
+                <StackLayout Orientation="Horizontal" HeightRequest="50" BackgroundColor="white" Padding="5">
+                    <StackLayout Spacing="0" BackgroundColor="White" Orientation="Horizontal" HorizontalOptions="Start">
+                        <Button BackgroundColor="BlueViolet" WidthRequest="40" HeightRequest="40" HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
+                        <Label FontSize="14" TextColor="Black" Text="Iniciar" HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout Spacing="0" BackgroundColor="White" Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                        <Button BackgroundColor="BlueViolet" WidthRequest="40" HeightRequest="40" HorizontalOptions="EndAndExpand" VerticalOptions="Center"/>
+                        <Label FontSize="14" TextColor="Black" Text="Cerrar" HorizontalOptions="EndAndExpand" VerticalOptions="Center"/>
+                    </StackLayout>
+                </StackLayout>
+                    
+                    <StackLayout Orientation="Horizontal">
+                        <Label FontSize="14" Text="Edad: " TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100"/>
+                        <Entry HorizontalOptions="FillAndExpand" Text="29" TextColor="White" BackgroundColor="Gray"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label FontSize="14" Text="Email: " TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100"/>
+                        <Entry HorizontalOptions="FillAndExpand" Text="xxx@gmail.com" TextColor="White" BackgroundColor="Gray"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label FontSize="14" Text="Habilidades: " TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100"/>
+                        <Entry HorizontalOptions="FillAndExpand" Text="C#, Xamarin, JS, Angular" TextColor="White" BackgroundColor="Gray"/>
+                    </StackLayout>
+                    
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
